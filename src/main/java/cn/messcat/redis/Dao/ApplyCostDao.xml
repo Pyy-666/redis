@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.messcat.redis.Dao.ApplyCostDao">
+
+    <select id="queryAll" resultType="cn.messcat.redis.entity.ApplyCost">
+        select * from apply_cost
+    </select>
+
+    <select id="findUserById" resultType="cn.messcat.redis.entity.ApplyCost">
+        select * from apply_cost where id=#{id}
+    </select>
+
+
+
+</mapper>
