@@ -25,14 +25,14 @@ public class ApplyCostServiceImpl implements ApplyCostService{
         if(hasKey){
             long start = System.currentTimeMillis();
             List<ApplyCost> list=operations.get(key);
-            System.out.println("==========从缓存中获得数据=========");
+            System.out.println("==========从缓存中获得数据=========!!!");
             long end = System.currentTimeMillis();
             System.out.println("查询redis花费的时间是:" + (end - start)+"s");
             return list;
         }else{
             long start = System.currentTimeMillis();
             List<ApplyCost> list=applyCostDao.queryAll();
-            System.out.println("==========从数据库中获得数据=========");
+            System.out.println("==========从数据库中获得数据=========!!!");
             long end = System.currentTimeMillis();
             System.out.println("查询数据库花费的时间是:" + (end - start)+"s");
             operations.set(key,list);
